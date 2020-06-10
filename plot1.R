@@ -3,7 +3,7 @@ data <- read.table("household_power_consumption.txt", header=TRUE, sep=";", na.s
 ## Format column "Date" to Type Date d/m/Y
 data$Date <- as.Date(data$Date, "%d/%m/%Y")
 
-## SUbset data set from Feb. 1, 2007 to Feb. 2, 2007
+## Subset data set from Feb. 1, 2007 to Feb. 2, 2007
 subsetdata <- subset(data, Date >= as.Date("2007-2-1") & Date <= as.Date("2007-2-2"))
 
 png("plot1.png", width=480, height=480)

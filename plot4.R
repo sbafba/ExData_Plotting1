@@ -21,7 +21,7 @@ subsetdata <- subsetdata[ ,!(names(subsetdata) %in% c("Date","Time"))]
 ## Add new "DateTime" column
 subsetdata <- cbind(datetime, subsetdata)
 
-## Format clumn datetime column
+## Format column datetime column
 subsetdata$datetime <- as.POSIXct(datetime)
 
 png("plot4.png", width=480, height=480)
