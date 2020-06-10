@@ -33,7 +33,7 @@ with(subsetdata, {
         lines(Sub_metering_2~datetime,col='Red')
         lines(Sub_metering_3~datetime,col='Blue')
 })
-legend('topright', col=c("black", "red", "blue"), lty=c(1,1,1), 
+legend("topright", col=c("black", "red", "blue"), lty=c(1,1,1), 
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()
