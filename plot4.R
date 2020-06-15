@@ -30,13 +30,13 @@ png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 with(subsetdata, {
         plot(Global_active_power~datetime, type="l", 
-             ylab="Global Active Power (kilowatts)", xlab="")
+             ylab="Global Active Power", xlab="")
         
         plot(Voltage~datetime, type="l", 
-             ylab="Voltage (volt)", xlab="datetime")
+             ylab="Voltage", xlab="datetime")
              
         plot(Sub_metering_1~datetime, type="l", 
-             ylab="Global Active Power (kilowatts)", xlab="")
+             ylab="Energy sub metering", xlab="")
         lines(Sub_metering_2~datetime,col='Red')
         lines(Sub_metering_3~datetime,col='Blue')
         legend("topright", inset = .00, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
@@ -46,7 +46,7 @@ with(subsetdata, {
                , bty="n")
        
         plot(Global_reactive_power~datetime, type="l", 
-             ylab="Global Rective Power (kilowatts)",xlab="datetime") 
+             ylab="Global_reactive_power",xlab="datetime") 
 })
 
 dev.off()
